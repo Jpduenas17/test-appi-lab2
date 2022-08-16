@@ -1,0 +1,16 @@
+org: jpduenas
+app: paoproject
+service: test-appi-lab2
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
